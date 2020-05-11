@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" style="background-color:#ccffff;">
+<head>
+  <meta charset="utf-8">
+  <title>Proiect SSC</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "f63d1477-a3e7-4702-9215-504229222441", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "0bb5e12c-cbad-4e8d-ab43-f78a38ce4a0e", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
